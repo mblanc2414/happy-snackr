@@ -22,6 +22,7 @@ db.on("disconnected", () => console.log("mongo has disconnected"));
 
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
+app.use('/public', express.static('public'));
 app.use("/snacks", snacksController);
 app.use("/snacking", snackingController);
 
