@@ -1,13 +1,15 @@
-
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const snackSchema = new Schema({
-    name: String
-}, {
-    timestamps: true
-});
+const snackSchema = new Schema(
+	{
+		name: String,
+	},
+	{
+		timestamps: true,
+	}
+);
 
-const Snack = mongoose.model('Snack', snackSchema);
+const Snack = mongoose.model("Snack", snackSchema);
 
 module.exports = Snack;

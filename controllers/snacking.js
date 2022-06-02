@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Snack = require("../models/snacks");
-// index
+const Snack = require("../models/snacks.js");
+// Routes
+// I
 router.get("/", (req, res) => {
 	Snack.find({}, (err, foundSnacks) => {
 		res.render("snacks/index.ejs", {
@@ -9,17 +10,30 @@ router.get("/", (req, res) => {
 		});
 	});
 });
-// create
-router.post("/", (req, res) => {
-	Snack.create(req.body, (err, createdSnack) => {
-		res.redirect("/snacks");
-	});
-});
-// new
+// N
 router.get("/new", (req, res) => {
 	res.render("snacks/new.ejs");
-});
-// edit
+})
+	// D
+	router.delete("/:id", (req, res) => {
+		Snack.findByIdAndRemove(req.params.id, () => {
+			res.redirect("/snacks");
+		});
+	});
+	// U
+	router.put("/:id", (req, res) => {
+		Snack.findByIdAndUpdate(req.params.id, req.body, () => {
+			res.redirect("/snacks");
+		});
+	});
+	// C
+	router.post("/", (req, res) => {
+		Snack.create(req.body, (err, createdSnack) => {
+			res.redirect("/snacks");
+		});
+	});
+
+// E
 router.get("/:id/edit", (req, res) => {
 	Snack.findById(req.params.id, (err, foundSnack) => {
 		res.render("snacks/edit.ejs", {
@@ -27,7 +41,7 @@ router.get("/:id/edit", (req, res) => {
 		});
 	});
 });
-// show
+// S
 router.get("/:id", (req, res) => {
 	Snack.findById(req.params.id, (err, foundSnack) => {
 		res.render("snacks/show.ejs", {
@@ -35,17 +49,5 @@ router.get("/:id", (req, res) => {
 		});
 	});
 });
-// update
-router.put("/:id", (req, res) => {
-	Snack.findByIdAndUpdate(req.params.id, req.body, () => {
-		res.redirect("/snacks");
-	});
-});
-// delete
-router.delete("/:id", (req, res) => {
-	Snack.findByIdAndRemove(req.params.id, () => {
-		res.redirect("/snacks");
-	});
-});
-
+// Export
 module.exports = router;

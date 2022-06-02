@@ -1,41 +1,35 @@
-// Dependencies 
-require('dotenv').config();
-const mongoose = require('mongoose');
-const express = require('express');
-const methodOverride = require('method-override');
-const snacksController = require('./controllers/snacks.js');
+require("dotenv").config();
+const mongoose = require("mongoose");
+const express = require("express");
+const methodOverride = require("method-override");
+const snacksController = require("./controllers/snacks");
 const app = express();
 
+const PORT = 3000;
 
-// MIDDLEWARE
-app.use(methodOverride('_method'));
-app.use(express.urlencoded({ extended: false }));
-app.use('/snacks', snacksController);
-
-// Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
-	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
 
-// Database Connection Error / Success
-const db = mongoose.connection;
-db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
-db.on('connected', () => console.log('mongo connected'));
-db.on('disconnected', () => console.log('mongo disconnected'));
+db = mongoose.connection;
 
+db.on("error", (err) =>
+	console.log(`${err.message}  is mongodb not connected?`)
+);
+db.on("connected", () => console.log("MONGO is connected :) !"));
+db.on("disconnected", () => console.log("mongo has disconnected"));
 
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: false }));
+app.use("/snacks", snacksController);
 
-
-
-
-app.get('/', (req, res) => {
-    res.render('index.ejs');
+app.get("/", (req, res) => {
+	res.render("index.ejs");
 });
 
-// Listener///
-app.listen(3000, () => {
-    console.log('listening....');
+app.listen(PORT, () => {
+	console.log(`listening on port ${PORT}`);
 });
+
 
 
