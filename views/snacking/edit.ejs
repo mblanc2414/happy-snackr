@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Happy Snackr</title>
+	</head>
+	<body>
+		<header>
+			<h1>Edit: <%= snacking.name %>Snacking Info</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/snacking">Snacking Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h2>Snack Attributes:</h2>
+			<form action="/snacking/<%= snacking._id %>?_method=PUT" method="POST">
+				<input type="text" name="name" value="<%=  snacking.name%> " /><br />
+				<input type="submit" value="Update Snacking" />
+			</form>
+		</main>
+	</body>
+</html>

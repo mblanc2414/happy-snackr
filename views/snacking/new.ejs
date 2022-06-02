@@ -8,17 +8,23 @@
 	</head>
 	<body>
 		<header>
-			<h1>Welcome the Happy Pantry</h1>
+			<h1>Create an Snacking</h1>
 			<nav>
 				<ul>
 					<li>
-						<a href="/snacks">Sweet Snacks</a>
+						<a href="/">Home</a>
 					</li>
 					<li>
-						<a href="/snacking">Salty Snacks</a>
+						<a href="/snacking">Snacking Index</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
+		<main>
+			<form action="/snacking" method="POST">
+				<input type="text" name="name" />
+				<input type="submit" value="Create Snacking" />
+			</form>
+		</main>
 	</body>
 </html>
