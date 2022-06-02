@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Show Page for <%= snack.name %></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/snacks">Snack Index</a>
+                </li>
+            </ul>
+<section>
+    <form action="/snacks/<%= snack._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Snack" />
+    </form>
+</section>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Snack Attributes:</h2>
+            <ul>
+                <li>Name: <%= snack.name %></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

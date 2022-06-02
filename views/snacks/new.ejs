@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Express Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Create an Snack</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/snacks">Snacks Index</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/snacks" method="POST">
+            <input type="text" name="name" />
+            <input type="submit" value="Create Snack" />
+        </form>
+    </main>
+</body>
+
+</html>
