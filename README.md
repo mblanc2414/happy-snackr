@@ -1,9 +1,9 @@
-HAPPY SNACKR
-DESCRIPTION: 
+<title>HAPPY SNACKR</title>
+<h1>DESCRIPTION:</ 
 The Happy Snackr app, is fun app for any person or user who just loves snacks. The app allows users to see various snacks by specific categories, add their favorite snack by category, and remove snacks at any time. 
-FUTURE FUNCTIONATIONALITY:
+<h1>FUTURE FUNCTIONATIONALITY:</h1>
 I would like this app to become "pantry app" that can help a user keep track of how they've stocked their pantry after grocery shopping, as well as fun snack selector for users who might be a little indecisive.
-TECHNOLOGIES USED:
+<h1>TECHNOLOGIES USED:</h1>
 HTML
 CSS
 JAVASCRIPT
