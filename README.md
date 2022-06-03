@@ -1,6 +1,6 @@
 <h1>HAPPY SNACKR</h1>
 <br>
-<h1>DESCRIPTION:</ 
+<h1>DESCRIPTION:</h1> 
 The Happy Snackr app, is fun app for any person or user who just loves snacks. The app allows users to see various snacks by specific categories, add their favorite snack by category, and remove snacks at any time. 
   <br>
 <h1>FUTURE FUNCTIONATIONALITY:</h1>
