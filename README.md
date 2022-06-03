@@ -15,6 +15,7 @@ EXPRESS
 EJS
 NODE JS
 LUCID PROJECT PLANNING
+
 ![Happy Snackr](https://i.imgur.com/gJagqzR.png)
 ![Index](https://i.imgur.com/1Lw5hor.png)
 ![Edit](https://i.imgur.com/lRKad9W.png))
