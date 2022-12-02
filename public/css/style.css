@@ -42,3 +42,9 @@ body {
 .rainbow-letters span:nth-child(10n + 8){
   color: #ffc107;
 }
+.rainbow-letters span:nth-child(10n + 9){
+    color: #ff07fb;
+}
+.rainbow-letters span:nth-child(10n + 10){
+    color: #07c1ff;
+}
