@@ -5,30 +5,29 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../../public/css/style.css">
-		<title>Happy Snackr</title>
+		<!-- <title>Happy Snackr</title> -->
         <link href="https://fonts.googleapis.com/css2? family=Macondo&family=Poiret+One&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header>
 			<h1>Salty Snacking</h1>
 			<nav>
-				<ul>
-					<li>
+				
+					
 						<a href="/">Home</a>
-					</li>
-					<li>
+					
 						<a href="/snacking/new">Create a new Snack</a>
-					</li>
-				</ul>
+					
+				
 			</nav>
 		</header>
 		<main>
 			<h2>List of Snacks</h2>
 			<ul>
 				<% for (let i = 0; i < snacking.length; i++ ) { %>
-				<li>
+				
 					<a href="/snacking/<%= snacking[i]._id %> "><%= snacking[i].name %> </a>
-				</li>
+				
 				<% } %>
 			</ul>
 		</main>
