@@ -22,6 +22,7 @@
 			<h2>Snacking Attributes:</h2>
 			<ul>
 				<li>Name: <%= snacking.name %></li>
+				<ul></ul>
 			</ul>
 			<section>
 				<form action="/snacking/<%= snacking._id %>?_method=DELETE" method="POST">
@@ -30,6 +31,7 @@
 			</section>
 			<section>
 				<a href="/snacking/<%= snacking._id %>/edit">Edit</a>
+				<ul></ul>
 			</section>
 		</main>
 	</body>
