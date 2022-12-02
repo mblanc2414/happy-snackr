@@ -48,3 +48,15 @@ body {
 .rainbow-letters span:nth-child(10n + 10){
     color: #07c1ff;
 }
+.sweetpage {
+    text-align: center;
+    display: inline-flex;
+}
+.saltypage {
+    text-align: center;
+    display:inline-flex;
+}
+.categories {
+    text-align: center;
+    display:inline-flex;
+}
